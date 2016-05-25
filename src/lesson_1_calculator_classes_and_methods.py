@@ -31,4 +31,4 @@ class Calculator(object):
 lefteris_calculator = Calculator( "green" )
 
 print str( lefteris_calculator.addition(10, 20) )
-print "done"
+print "done..."
