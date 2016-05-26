@@ -32,18 +32,21 @@ class Recursive_fibonacci(object):
         if y < self.stop_at:
             self.calculate(y, res)
 
-# class Recursive_fibonacci_2(object):
-#     def __init__(self, stop_at):
-#         self.stop_at = stop_at
+class Recursive_fibonacci_2(object):
+    def __init__(self, stop_at):
+        self.stop_at = stop_at
 #         
-#     def calculate_helper(self, n):
-#         if n == 1 or n == 2:
-#             return 1
-#         return self.calculate_helper( n - 1 ) + self.calculate_helper( n - 2 )
+    def calculate_helper(self, n):
+        if n == 0:
+            return 0
+        
+        if n == 1 or n == 2:
+            return 1
+        return self.calculate_helper( n - 1 ) + self.calculate_helper( n - 2 )
 #     
-#     def calculate(self):
-#         for i in range(self.stop_at):
-#             print self.calculate_helper(i)
+    def calculate(self):
+        for i in range(self.stop_at):
+            print str(self.calculate_helper(i)) + " ",
 
 
 naive_fibonacci = Naive_fibonacci(300)
@@ -64,11 +67,11 @@ b = datetime.datetime.now()
 print ""
 print "Time: " + str(b-a)
 
-# recursive_fibonacci_2 = Recursive_fibonacci_2(10)   
-# print ""
-# print "Recursive 2 Output:"
-# a = datetime.datetime.now()
-# recursive_fibonacci_2.calculate()
-# b = datetime.datetime.now()
-# print ""
-# print "Time: " + str(b-a)
+recursive_fibonacci_2 = Recursive_fibonacci_2(14)   
+print ""
+print "Recursive 2 Output:"
+a = datetime.datetime.now()
+recursive_fibonacci_2.calculate()
+b = datetime.datetime.now()
+print ""
+print "Time: " + str(b-a)
