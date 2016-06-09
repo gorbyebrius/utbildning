@@ -7,8 +7,8 @@ import re
 # sentence = "( P → Q ) → ( ¬ Q → ¬ P )"
 # sentence = "( P ∨ R ) → ( P ∨ Q )"
 # sentence = "( P ∨ R ) ∧ ( P ∨ Q )"
-sentence = "( P ∧ R ) ↔ ( P ∨ Q )"
-# sentence = raw_input('Enter your input:')
+# sentence = "( P ∧ R ) ↔ ( P ∨ Q )"
+sentence = raw_input('Enter your input:')
 #sentence = "¬ P → P"
 
 print sentence
